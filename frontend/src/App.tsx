@@ -5,9 +5,9 @@ function App() {
   const foo: string = "bar";
 
   const getNumbers = () => {
-    ApiClient.get("/prime-number")
+    ApiClient.get("./prime-number")
       .then(({ data }) => console.log(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   };
 
   useEffect(() => getNumbers(), []);
