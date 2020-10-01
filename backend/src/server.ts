@@ -3,7 +3,7 @@ const express = require("express");
 const PrimeNumber = require("./prime-number");
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use("/prime-number", PrimeNumber);
 

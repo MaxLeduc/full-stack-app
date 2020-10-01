@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ApiClient from "./API/apiClient";
 
 function App() {
-  const foo: string = 'bar'
+  const foo: string = "bar";
+
+  const getNumbers = () => {
+    ApiClient.get("/prime-number")
+      .then(({ data }) => console.log(data))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => getNumbers(), []);
 
   return (
     <div className="App">
