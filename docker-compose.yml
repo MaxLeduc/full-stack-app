@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.backend
+    ports:
+      - "8080:8080"
+    container_name: server
+  web-app:
+    tty: true
+    build:
+      context: .
+      dockerfile: ./Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    container_name: web-app
