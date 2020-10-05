@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ApiClient from "./API/apiClient";
 
+interface Number {
+  id: string;
+}
+
 function App() {
-  const foo: string = "bar";
+  const [numbers, setNumbers] = useState([]);
 
   const getNumbers = () => {
     ApiClient.get("prime-number")
-      .then(({ data }) => console.log(data))
+      .then(({ data }) => setNumbers(data.data))
       .catch((err) => console.error(err));
   };
 
@@ -14,7 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{foo}</h1>
+      {numbers.map((number: Number) => (
+        <div key={number.id}>{number.id}</div>
+      ))}
     </div>
   );
 }

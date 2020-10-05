@@ -10,6 +10,12 @@ const getTopNews = async (req, res) => {
       {
         id: 2,
       },
+      {
+        id: 3,
+      },
+      {
+        id: 4,
+      },
     ],
   };
 
