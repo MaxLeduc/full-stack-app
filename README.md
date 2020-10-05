@@ -1,15 +1,16 @@
 # Full Stack Starter
+This project is to provide a quick way to spin up a full stack project.
 
 ## Development
-When developing you will be needing `node` and `npm` locally installed on your machine.
+This project uses Yarn Workspaces to manage dependencies. To install the application locally, run `yarn install` in the root folder of the project.
 
 ### Frontend
-To start the frontend React application use the `yarn start` command.
+To start the frontend React application go in the `frontend` directory and use the `yarn start` command.
 
 ### Backend
-To start the backend node application you can use the `yarn dev` command, which will also enable hot-reloading.
+To start the backend node application go in the `frontend` directory and use the `yarn dev` command, which will also enable hot-reloading.
 
-You can also use the `yarn build` and `yarn start` to statically serve the application.
+You can also use `yarn build` and then `yarn start` to statically serve the application.
 
 ## Docker
 To start the application (full stack) by using docker, run the following commands:
